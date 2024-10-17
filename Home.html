@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+
+    <header class="header">
+        <img src="Logo.png" class="logo">
+        <h1 class="page-title">~Cavor Kuen~</h1>
+        <div class="menu-icon" onclick="toggleMenu()">
+            &#9776;
+        </div>
+    </header>
+
+    <nav class="navbar" id="navbar">
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="Culture .html">Culture and Heritage</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="history.html">History</a></li>
+            <li><a href="language.html">Language</a></li>
+            <li><a href="more.html">More</a></li>
+        </ul>
+    </nav>
+
+    <script>
+        function toggleMenu() {
+            var navbar = document.getElementById("navbar");
+            if (navbar.style.display === "block") {
+                navbar.style.display = "none";
+            } else {
+                navbar.style.display = "block";
+            }
+        }
+    </script>
+
+    <h1>Welcome to Cavor Kuen</h1>
+    <p>Discover Pamiri Culture and Heritage</p>
+
+    <div class="image-right">
+        <img src="h4.jpg" alt="Pamiri Tradition 1">
+    </div>
+    
+    <h2>Explore Our Roots and Traditions</h2>
+    <p>
+        Pamiri culture is rich with history, language, and tradition, rooted deeply in the majestic mountains of the Pamirs.
+        The Pamirs, often called "The Roof of the World," are located in the eastern part of Tajikistan, bordering Afghanistan,
+        China, and Kyrgyzstan. The region has been inhabited for over 2,500 years and is known for its unique culture, language, 
+        and history.
+    </p>
+
+    <h3>Explore Our Platform:</h3>
+    <ul>
+        <li><a href="culture.html"><strong>Culture and Heritage</strong></a>: Learn about Pamiri traditions, architecture, and clothing.</li>
+        <li><a href="events.html"><strong>Events</strong></a>: Discover key festivals like Navruz and Osh celebrated across Pamir.</li>
+        <li><a href="language.html"><strong>Language Learning</strong></a>: Dive into the Pamiri dialects and basic phrases in Shughni.</li>
+        <li><a href="history.html"><strong>History</strong></a>: Read about the ancient and modern history of Pamir and its role in the Silk Road.</li>
+        <li><a href="more.html"><strong>Discussions and More</strong></a>: Engage with others by joining discussions and staying updated on Pamiri news.</li>
+    </ul>
+
+    <div class="image-left">
+        <img src="hom1.jpeg" alt="Pamiri Tradition 2">
+    </div>
+
+    <h2>Where is Pamir Located?</h2>
+    <p>
+        The Pamirs are located in the eastern part of Tajikistan, bordering Afghanistan, China, and Kyrgyzstan.
+        This region is known for its high-altitude mountain ranges, serving as a historical crossroads for ancient traders.
+    </p>
+
+    <h2>FEEL the Pamir energy</h2>
+    <div class="gallery">
+        <img src="OIP.jpg" alt="Pamiri Tradition 3">
+        <img src="ne1.jpeg" alt="Pamiri Tradition 4">
+        <img src="Ca2.jpeg" alt="Pamiri Tradition 5">
+        <img src="h1.jpeg" alt="Pamiri Tradition 6">
+    </div>
+
+</body>
+</html>

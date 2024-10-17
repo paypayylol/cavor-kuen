@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discussions and More</title>
+    <link rel="stylesheet" href="more.css"> 
+</head>
+<body>
+   
+    <header class="header">
+        <img src="Logo.png" class="logo">
+        <h1 class="page-title">~Discussions~</h1>
+        <div class="menu-icon" onclick="toggleMenu()">
+            &#9776; 
+        </div>
+    </header>
+
+    <nav class="navbar" id="navbar">
+        <ul>
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="Culture.html">Culture and Heritage</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="History.html">History</a></li>
+            <li><a href="language.html">Language</a></li>
+            <li><a href="more.html">More</a></li>
+        </ul>
+    </nav>
+
+    <script>
+        function toggleMenu() {
+            var navbar = document.getElementById("navbar");
+            if (navbar.style.display === "block") {
+                navbar.style.display = "none";
+            } else {
+                navbar.style.display = "block";
+            }
+        }
+    </script>
+
+    <h1>Discussions and More</h1>
+    <p>Join the conversation! Engage with other users by sharing your thoughts on Pamiri culture, traditions, and events. Be sure to respect the community guidelines to keep the discussion space safe and welcoming for everyone.</p>
+
+    <h2>Topics to Explore</h2>
+    <ul>
+        <li>What aspect of Pamiri culture fascinates you the most?</li>
+        <li>What are your thoughts on preserving Pamiri traditions in the modern world?</li>
+        <li>What are some events or festivals you would like to attend in Pamir?</li>
+    </ul>
+
+    <h2>Community Guidelines</h2>
+    <p>We encourage healthy discussions, but please be respectful and refrain from using any offensive language. Any comments that violate the guidelines will be removed.</p>
+
+    <!-- Modal for terms and privacy agreement -->
+    <div id="termsModal" class="modal">
+        <div class="modal-content">
+            <h2>Terms and Privacy Agreement</h2>
+            <p>Please agree to the following terms and privacy policies before entering the chat:</p>
+            <p><strong>Terms of Use:</strong> You agree not to share any personal or sensitive information in the chat. Be respectful to other users.</p>
+            <p><strong>Privacy Policy:</strong> Your chat messages will be stored temporarily for the duration of the session and will not be shared with third parties.</p>
+            <button id="agreeBtn">I Agree</button>
+        </div>
+    </div>
+
+    <!-- Chat section -->
+    <div id="chatSection" class="chat-section" style="display: none;">
+        <h3>Chat Section</h3>
+        <form id="userInfoForm">
+            <input type="text" id="firstName" placeholder="First Name" required>
+            <input type="text" id="surname" placeholder="Surname" required>
+            <input type="text" id="state" placeholder="State of Residence" required>
+            <button type="submit">Enter Chat</button>
+        </form>
+
+        <!-- Chatango Widget Section -->
+        <div id="chatangoContainer" style="display: none;">
+            <div id="chatango">
+                <script id="cid0020000390180479405" data-cfasync="false" async src="//st.chatango.com/js/gz/emb.js" style="width: 250px; height: 350px;"></script>
+                <script>
+                    var chatangoConfig = {
+                        "handle": "chaqchaq",
+                        "arch": "js",
+                        "styles": {
+                            "b": 100,
+                            "c": "000000",
+                            "d": "000000",
+                            "l": "FFFFFF",
+                            "m": "FFFFFF",
+                            "p": 10,
+                            "r": 100,
+                            "cnrs": "0.35",
+                            "fwtickm": 1
+                        }
+                    };
+                </script>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const termsModal = document.getElementById('termsModal');
+        const chatSection = document.getElementById('chatSection');
+        const agreeBtn = document.getElementById('agreeBtn');
+        const userInfoForm = document.getElementById('userInfoForm');
+        const chatangoContainer = document.getElementById('chatangoContainer');
+
+        // When the user agrees to the terms
+        agreeBtn.addEventListener('click', () => {
+            termsModal.style.display = 'none'; // Hide the terms modal
+            chatSection.style.display = 'block'; // Show the chat section form
+        });
+
+        // When the user submits their name and state
+        userInfoForm.addEventListener('submit', (event) => {
+            event.preventDefault(); // Prevent form submission
+
+            const firstName = document.getElementById('firstName').value;
+            const surname = document.getElementById('surname').value;
+            const state = document.getElementById('state').value;
+
+            // Hide the form and show the Chatango widget
+            userInfoForm.style.display = 'none';
+            chatangoContainer.style.display = 'block';
+        });
+    </script>
+
+</body>
+</html>

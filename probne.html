@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Pamiri Culture Platform</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <img src="Logo.png" class="logo">
+        <h1 class="page-title">~Cavor Kuen~</h1>
+        <span class="nav-icon" onclick="toggleMenu()">&#9776;</span>
+    </header>
+
+    <!-- News Ticker -->
+    <div class="news-ticker">
+        <p>News shall be displayed here as a moving text</p>
+    </div>
+
+    <!-- Main Content -->
+    <section class="content">
+        <img src="hom1.jpeg" alt="Home Image">
+        <div class="text-content">
+            <p>This is the home page content. Talk about Pamiri culture here.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>All rights reserved &copy; 2024 | Contact: +992-00-466-28-77</p>
+    </footer>
+
+    <!-- Hamburger Menu -->
+    <div id="menu">
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="culture.html">Culture and Heritage</a></li>
+            <li><a href="news.html">News and Events</a></li>
+            <li><a href="history.html">History</a></li>
+            <li><a href="language.html">Language</a></li>
+            <li><a href="discussions.html">Discussions</a></li>
+        </ul>
+    </div>
+
+    <!-- JavaScript for Menu and News Ticker -->
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('menu');
+            if (menu.style.display === 'block') {
+                menu.style.display = 'none';
+            } else {
+                menu.style.display = 'block';
+            }
+        }
+
+        window.onload = function() {
+            const ticker = document.querySelector('.news-ticker p');
+            ticker.innerHTML = `<marquee>${ticker.innerHTML}</marquee>`;
+        }
+    </script>
+
+
+
+    <div class="content">
+        <div class="carousel-container">
+            <div class="carousel">
+                <div class="card active">
+                    <img src="h2.jpeg" alt="Hawaii">
+                    <div class="card-info">
+                        <span class="tag">Domestic</span>
+                        <h3>Enjoy the exotic of sunny Hawaii</h3>
+                        <p>Maui, Hawaii</p>
+                    </div>
+                </div>
+                <div class="card active">
+                    <img src="hom1.jpeg" alt="Hawaii">
+                    <div class="card-info">
+                        <span class="tag">Domestic</span>
+                        <h3>Enjoy the exotic of sunny Hawaii</h3>
+                        <p>Maui, Hawaii</p>
+                    </div>
+                </div>
+                <div class="card active">
+                    <img src="h1.jpeg" alt="Hawaii">
+                    <div class="card-info">
+                        <span class="tag">Domestic</span>
+                        <h3>Enjoy the exotic of sunny Hawaii</h3>
+                        <p>Maui, Hawaii</p>
+                    </div>
+                </div>
+                <div class="card active">
+                    <img src="h4.jpg" alt="Hawaii">
+                    <div class="card-info">
+                        <span class="tag">Domestic</span>
+                        <h3>Enjoy the exotic of sunny Hawaii</h3>
+                        <p>Maui, Hawaii</p>
+                    </div>
+                </div>
+                <div class="card active">
+                    <img src="h3.png" alt="Hawaii">
+                    <div class="card-info">
+                        <span class="tag">Domestic</span>
+                        <h3>Enjoy the exotic of sunny Hawaii</h3>
+                        <p>Maui, Hawaii</p>
+                    </div>
+                </div>
+                <div class="card active">
+                    <img src="h4.jpg" alt="Hawaii">
+                    <div class="card-info">
+                        <span class="tag">Domestic</span>
+                        <h3>Enjoy the exotic of sunny Hawaii</h3>
+                        <p>Maui, Hawaii</p>
+                    </div>
+                </div>
+                <div class="card active">
+                    <img src="h3.png" alt="Hawaii">
+                    <div class="card-info">
+                        <span class="tag">Domestic</span>
+                        <h3>Enjoy the exotic of sunny Hawaii</h3>
+                        <p>Maui, Hawaii</p>
+                    </div>
+                </div>
+                <!-- Add 9 more images like this -->
+                <!-- Example: Duplicate the 'card' structure and update each image -->
+            </div>
+            <div class="carousel-controls">
+                <span class="prev-btn">&#10094;</span>
+                <span class="next-btn">&#10095;</span>
+            </div>
+        </div>
+
+
+        
+    </div>
+    <p>This carousel demo integrates with the existing page layout. The images are all sized evenly, and more images can be added to the carousel by duplicating the card elements.</p>
+    <footer>
+        <p>&copy; 2024 Your Website</p>
+    </footer>
+
+    <script>
+        let currentIndex = 0;
+        const cards = document.querySelectorAll('.card');
+        const totalCards = cards.length;
+        const prevBtn = document.querySelector('.prev-btn');
+        const nextBtn = document.querySelector('.next-btn');
+        const carousel = document.querySelector('.carousel');
+        
+        function updateCarousel() {
+            // Move the active card to the center
+            const cardWidth = cards[0].offsetWidth;
+            const carouselWidth = carousel.offsetWidth;
+            const moveDistance = (carouselWidth / 2) - (cardWidth / 2) - (cardWidth * currentIndex);
+            
+            carousel.style.transform = `translateX(${moveDistance}px)`;
+        
+            // Manage the active class for the cards
+            cards.forEach((card, index) => {
+                card.classList.remove('active');
+                if (index === currentIndex) {
+                    card.classList.add('active');
+                }
+            });
+        }
+        
+        nextBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % totalCards;
+            updateCarousel();
+        });
+        
+        prevBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + totalCards) % totalCards;
+            updateCarousel();
+        });
+        
+        updateCarousel();
+    </script>
+
+
+
+</body>
+</html>

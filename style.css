@@ -1,0 +1,198 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif; /* San-serif font */
+    background-color: #e6f4e2; /* Soft background inspired by natural colors */
+    color: #333;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #7b4d3a; /* Deep brown */
+    color: white;
+}
+
+header h1 {
+    font-size: 24px;
+}
+
+.nav-icon {
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* Hamburger Menu */
+#menu {
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    display: none;
+    background-color: #5c3c2a;
+    border-radius: 5px;
+}
+
+#menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+#menu ul li {
+    padding: 10px;
+    text-align: center;
+}
+
+#menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+#menu ul li a:hover {
+    background-color: #432c20;
+}
+
+/* News Ticker */
+.news-ticker {
+    background-color: #b2df8a; /* Light green */
+    color: #333;
+    padding: 10px;
+    font-size: 16px;
+    text-align: center;
+}
+
+/* Main Content */
+.content {
+    display: flex;
+    padding: 20px;
+    justify-content: space-around;
+}
+
+.content img {
+    width: 400px;
+    height: 300px;
+    margin-right: 20px;
+}
+
+.text-content {
+    width: 50%;
+}
+
+/* Footer */
+footer {
+    background-color: #7b4d3a;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+.logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+
+
+
+
+.carousel-container {
+    position: relative;
+    width: 80%;
+    max-width: 900px;
+    overflow: hidden;
+    margin: 0 auto; /* Center the carousel */
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    /* Adjust to show 3 items at once */
+}
+
+.card {
+    min-width: 30%; /* Three images per view */
+    margin: 10px;
+    transition: transform 0.5s ease;
+    opacity: 0.5;
+    transform: scale(0.9);
+    position: relative;
+}
+
+.card.active {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; /* Ensures all images are cropped consistently */
+    border-radius: 10px;
+}
+
+.card-info {
+    position: absolute;
+    bottom: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    width: 90%;
+}
+
+.card-info .tag {
+    background-color: #008080;
+    padding: 5px;
+    border-radius: 3px;
+    margin-bottom: 5px;
+}
+
+.card-info h3 {
+    margin: 5px 0;
+    font-size: 1.2rem;
+}
+
+.card-info p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.carousel-controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.carousel-controls span {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.prev-btn {
+    left: 10px;
+}
+
+.next-btn {
+    right: 10px;
+}
+
